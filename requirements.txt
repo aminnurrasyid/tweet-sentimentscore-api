@@ -1,6 +1,6 @@
 flask
 tweepy
-re
+re==2022.7.9
 pandas
 matplotlib
 nltk
