@@ -1,7 +1,7 @@
 flask
+nltk
 tweepy
 regex==2022.7.9
 pandas
 matplotlib
-nltk
 gunicorn
