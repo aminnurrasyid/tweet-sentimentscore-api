@@ -1,6 +1,5 @@
 flask
 tweepy
-json
 re
 pandas
 matplotlib
