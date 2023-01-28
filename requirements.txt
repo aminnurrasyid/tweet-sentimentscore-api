@@ -1,0 +1,8 @@
+flask
+tweepy
+json
+re
+pandas
+matplotlib
+nltk
+gunicorn
