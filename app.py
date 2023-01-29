@@ -31,7 +31,7 @@ def API():
     keywords = user_query + '-filter:retweets'
     limit = 200 
 
-    public_tweets = tweepy.Cursor(api.search_tweets, count=limit, q=keywords).items(limit)
+    public_tweets = tweepy.Cursor(api.search_tweets, count=limit, q=keywords, lang='en').items(limit)
 
     with open('negative.txt', 'r') as f:
         neg_words = f.read().split()
