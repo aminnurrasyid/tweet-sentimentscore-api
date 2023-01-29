@@ -111,11 +111,12 @@ def API():
     df['Sentiment Score'] = round(df['scalar2']/df['total_len'],2)
 
     sentiment_score = get_overallScore(df['Sentiment Score'])
-    str_tweets = jsonify(df['tweet'].tolist()) #str() wrap
+    str_tweets = str(df['tweet'].tolist()) #str() wrap
+    str_tweets_list = json.loads(str_tweets)
     
     record_dictionary={}
     record_dictionary['Query']= user_query
-    record_dictionary['tweets']= str_tweets
+    record_dictionary['tweets']= str_tweets_list
     record_dictionary['score']= sentiment_score
     json_record=[]
     json_record.append(record_dictionary)
