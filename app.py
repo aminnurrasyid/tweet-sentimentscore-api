@@ -95,7 +95,7 @@ def API():
         tweets.append((tweet.text).encode("utf-8"))
 
     df = pd.DataFrame(tweets, columns= ['tweet'])
-    data['tweets'] = data['tweets'].str.decode('utf-8') 
+    df['tweets'] = df['tweets'].str.decode('utf-8') 
     df['preprocess_txt1'] = df['tweet'].map(lambda x: text1_prep(x))
     df['preprocess_txt2'] = df['tweet'].map(lambda x: text2_prep(x))
     df['total_len'] = df['preprocess_txt2'].map(lambda x: len(x))
