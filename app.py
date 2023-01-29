@@ -12,7 +12,7 @@ from nltk.stem import WordNetLemmatizer
 app = Flask(__name__)
 
 
-@app.route('/api', methods=['GET'])
+@app.route('/', methods=['GET'])
 def API():
 
     api_key = "uf5tDna15YxoCg3gMA0xUC2eP"
