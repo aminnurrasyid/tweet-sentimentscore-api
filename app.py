@@ -1,6 +1,7 @@
+import flask
 from flask import Flask, request, jsonify
 import tweepy
-#import json
+import json
 import re
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -9,7 +10,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-app = Flask(__name__)
+app = flask.Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
