@@ -112,7 +112,7 @@ def API():
     df['Sentiment Score'] = round(df['scalar2']/df['total_len'],2)
 
     sentiment_score = get_overallScore(df['Sentiment Score'])
-    str_tweets = str(df['tweet'].tolist())
+    str_tweets = df['tweet'].tolist() # str( )
     
     record_dictionary={}
     record_dictionary['Query']= user_query
