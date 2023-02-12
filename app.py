@@ -1,4 +1,6 @@
+# if this api does not work anymore this mean that :-
 # this hosted api will not return anything due to it depends on Twitter API, which was changed to a paid plan API.
+# Twitter claim that it will be changed on 13 February 2023
 # further evaluation process can be made throughout the code.
 
 import flask
