@@ -1,3 +1,6 @@
+# this hosted api will not return anything due to it depends on Twitter API, which was changed to a paid plan API.
+# further evaluation process can be made throughout the code.
+
 import flask
 from flask import Flask, request, jsonify
 import tweepy
@@ -31,6 +34,7 @@ def API():
     keywords = user_query + '-filter:retweets'
     limit = 200 
 
+    # twitter api call - get latest 200 english tweets that is not a retweet
     public_tweets = tweepy.Cursor(api.search_tweets, count=limit, q=keywords, lang='en').items(limit)
 
     with open('negative.txt', 'r') as f:
